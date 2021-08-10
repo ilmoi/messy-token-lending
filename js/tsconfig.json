@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+        "target": "esnext",
+        "emitDeclarationOnly": true,
+        "outDir": "lib",
+        "typeRoots": ["node_modules/@types", "types"],
+        "esModuleInterop": true,
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "declaration": true,
+        "stripInternal": true,
+        //todo the below 2 are needed for main.ts to work
+        "module": "commonjs",
+        "moduleResolution": "node",
+    },
+    "files": ["rollup.config.ts"],
+    "include": ["src", "types"],
+    "exclude": ["lib", "node_modules"],
+    "typedocOptions": {
+        "entryPoints": ["src/index.ts"],
+        "out": "docs"
+    }
+}
